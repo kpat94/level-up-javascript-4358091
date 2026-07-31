@@ -35,6 +35,18 @@
     ]
     // Write your code here
 
+    function vegetarianMenu(menu) {
+      const menuNode = document.querySelector('#menu');
+      const vegetarianOptions = menu.filter(option => option.isVegetarian === true);
+      vegetarianOptions.foreach(option => {
+        let dish = document.createElement("li");
+        dish.textContent = option.name;
+        menuNode.appendChild(dish);
+      });
+    }
+
+    vegetarianMenu(menu);
+
   </script>
 </body>
 
